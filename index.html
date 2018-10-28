@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Adding a bit of static type checking to a world of Web Components</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -26,19 +26,19 @@
 			<div class="slides">
 
 				<section>
-					<img src="img/logo.png">
+					<img src="img/logo.png" class="plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/ing-logo.svg" class="stretch">
+					<img src="img/ing-logo.svg" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/baker.png" class="stretch">
+					<img src="img/baker.png" class="stretch plain">
 					<aside class="notes">
 						<p>Where we created this project Baker. Which is a orchestrator for process flows.</p>
 						<p>If you have not heard of Baker yet. And you are making API's then changes are that you could save lots of time</p>
@@ -46,13 +46,13 @@
 				</section>
 
 				<section>
-					<img src="img/baker-code.png" class="stretch">
+					<img src="img/baker-code.png" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/baker-recipe.png" class="stretch">
+					<img src="img/baker-recipe.png" class="stretch plain">
 					<p>
 						<a href="https://github.com/ing-bank/baker" target="_blank">Baker on Github</a><br />
 						<a href="https://github.com/ing-bank/baker" target="_blank">https://github.com/ing-bank/baker</a>
@@ -63,31 +63,135 @@
 				</section>
 
 				<section>
-					<img src="img/languages-1.png" class="stretch">
+					<img src="img/languages-1.png" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/languages-2.png" class="stretch">
+					<img src="img/languages-2.png" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/languages-3.png" class="stretch">
+					<img src="img/languages-3.png" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/languages-4.png" class="stretch">
+					<img src="img/languages-4.png" class="stretch plain">
 					<aside class="notes">
 					</aside>
 				</section>
 
 				<section>
-					<img src="img/languages-5.png" class="stretch">
+					<img src="img/languages-5.png" class="stretch plain">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section data-background-image="img/lion.jpg">
+					<aside class="notes">
+						One final remark before we start. These are my opinions and not INGs. I'm not the CIO of ING.. yet...
+						And therefor my ideas can not be linked to ING.
+					</aside>
+				</section>
+
+				<section>
+					<blockquote>
+						<p>
+							I just heard that ING hates ... and does ....
+						</p>
+					</blockquote>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/fake-news.gif" class="stretch plain">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<blockquote>
+						<p>
+							I just heard that @JordyMoos hates ... and does ....
+						</p>
+					</blockquote>
+					<aside class="notes">
+					</aside>
+				</section>
+
+
+				<section>
+					<img src="img/approves.jpg" class="stretch plain">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/logo.png" class="plain">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/goodbadugly.jpeg" class="plain">
+					<aside class="notes">
+						<p>For the schedule we will talk about Web Components, What they are.</p>
+						<p>And their good and bad parts.</p>
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/opinions.jpeg" class="plain">
+					<aside class="notes">
+						After that I will throw in some opinions.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/tackle-1.jpg" class="plain">
+					<aside class="notes">
+						And then I try to tackle the bad and ugly with some ideas.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/brighter-world.jpg" class="plain">
+					<aside class="notes">
+						Hopefully that will give us a brighter world
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/inspiring.png" class="plain">
+					<aside class="notes">
+						Or at least give us inspring idea's
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/logo.png" class="plain">
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h1>Thank You</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>Thanks for the logo Pascal</h3>
+					<img src="img/logo.png" class="plain">
+					<p>
+						<a href="https://twitter.com/passle_">https://twitter.com/passle_</a>
+					</p>
 					<aside class="notes">
 					</aside>
 				</section>
@@ -104,6 +208,8 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+        transition: 'fade',
+				transitionSpeed: 'fast',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
