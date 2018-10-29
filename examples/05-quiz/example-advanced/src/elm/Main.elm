@@ -137,31 +137,7 @@ viewDifficulty model =
     node "paper-dropdown-menu"
         [ attribute "label" "Difficulty"
         , Events.on "value-changed"
-            (Decode.map SelectDifficulty
-                ((Decode.at [ "detail", "value" ] Decode.string)
-                    |> Decode.andThen
-                        (\difficulty ->
-                            case difficulty of
-                                "Easy" ->
-                                    Decode.succeed Quiz.Easy
-
-                                "Normal" ->
-                                    Decode.succeed Quiz.Normal
-
-                                "Hard" ->
-                                    Decode.succeed Quiz.Hard
-
-                                "Speedy" ->
-                                    Decode.succeed Quiz.Speedy
-
-                                "Impossible" ->
-                                    Decode.succeed Quiz.Impossible
-
-                                _ ->
-                                    Decode.fail "Invalid value"
-                        )
-                )
-            )
+            (Decode.map SelectDifficulty decodeSelectData)
         , attribute "noAnimations" "noAnimations"
         ]
         [ node "paper-listbox"
@@ -177,6 +153,32 @@ viewDifficulty model =
             ]
         ]
 
+
+decodeSelectData : Decoder Quiz.Difficulty
+decodeSelectData =
+    ((Decode.at [ "detail", "value" ] Decode.string)
+                        |> Decode.andThen
+                            (\difficulty ->
+                                case difficulty of
+                                    "Easy" ->
+                                        Decode.succeed Quiz.Easy
+
+                                    "Normal" ->
+                                        Decode.succeed Quiz.Normal
+
+                                    "Hard" ->
+                                        Decode.succeed Quiz.Hard
+
+                                    "Speedy" ->
+                                        Decode.succeed Quiz.Speedy
+
+                                    "Impossible" ->
+                                        Decode.succeed Quiz.Impossible
+
+                                    _ ->
+                                        Decode.fail "Invalid value"
+                            )
+                    )
 
 viewShuffleQuestions : PrepareModel -> Html Msg
 viewShuffleQuestions model =
