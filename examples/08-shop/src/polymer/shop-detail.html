@@ -194,42 +194,6 @@ This code is potentially changed to fit the elm app
         largeImage: String
       }}
 
-      // static get observers() { return [
-      //   '_itemChanged(item, visible)'
-      // ]}
-      //
-      // _itemChanged(item, visible) {
-      //   if (visible) {
-      //     this._itemChangeDebouncer = Polymer.Debouncer.debounce(this._itemChangeDebouncer,
-      //       Polymer.Async.microTask, () => {
-      //         // The item description contains escaped HTML (e.g. "&lt;br&gt;"), so we need to
-      //         // unescape it ("<br>") and set it as innerHTML.
-      //         let text = item ? item.description : '';
-      //         this.$.desc.innerHTML = this._unescapeText(text);
-      //
-      //         // Reset the select menus.
-      //         this.$.quantitySelect.value = '1';
-      //         this.$.sizeSelect.value = 'M';
-      //
-      //         this.dispatchEvent(new CustomEvent('change-section', {
-      //           bubbles: true, composed: true, detail: {
-      //             category: item ? item.category : '',
-      //             title: item ? item.title : ''
-      //           }}));
-      //       })
-      //   }
-      // }
-
-      _unescapeText(text) {
-        let elem = document.createElement('textarea');
-        elem.innerHTML = text;
-        return elem.textContent;
-      }
-
-      _formatPrice(price) {
-        return price ? '$' + price.toFixed(2) : '';
-      }
-
       _addToCart() {
         // This event will be handled by shop-app.
         this.dispatchEvent(new CustomEvent('add-cart-item', {
