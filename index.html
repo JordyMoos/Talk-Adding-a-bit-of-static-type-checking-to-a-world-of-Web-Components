@@ -374,13 +374,10 @@
 					</aside>
 				</section>
 
-				
-
 				<section>
-					<h2></h2>
+					<img src="img/google-maps-nested-focus.png" class="plain stretch">
 					<aside class="notes">
-						Writing plain Web Components can be cumbersome.<br>
-						And that is why there are libraries to ease this pain.
+
 					</aside>
 				</section>
 
@@ -392,6 +389,9 @@
 						<li>Skate.js</li>
 					</ul>
 					<aside class="notes">
+						Writing plain Web Components can be cumbersome.<br>
+						And that is why there are libraries to ease this pain.<br>
+						<br>
 						There are libraries that make creating custom elements a bit easier.<br>
 						The most famous ones are probably Polymer and Hybrids.<br>
 						But there are others: Slim.js Stencil
@@ -408,6 +408,69 @@
 					</aside>
 				</section>
 
+				<section>
+					<img src="img/that-was-the-good-part.png" class="plain stretch">
+					<aside class="notes">
+						That was the good part
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-01.png" class="plain stretch">
+					<aside class="notes">
+						Lets say we have a awesome product detail custom element.<br>
+						Which shows detailed information of our product in our web shop<br>
+						We made it really self contained. The user of our custom element just needs to provide us with a product id
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-01b.png" class="plain stretch">
+					<aside class="notes">
+						Kinda like that<br>
+						And when the product-id attribute is set or changed we will fetch the necessary data ourselves and update the html of our custom element.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-02.png" class="plain stretch">
+					<aside class="notes">
+						To actually do that we need some kind of Ajax library to do the fetching.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-03.png" class="plain stretch">
+					<aside class="notes">
+						Now we would also like to add Epic Word Cloud which also needs to fetch data.<br>
+						Both components should be able to work independently<br>
+						And what we see happening is that people put those libraries in custom elements on their own.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-04.png" class="plain stretch">
+					<aside class="notes">
+						Which for example looks like this. We have our real ajax library. And wrapped it in a Custom Element.<br>
+						We added a attribute `url` and then that one changed we fetch the data.<br>
+						And finally throw an event with the response.
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-05.png" class="plain stretch">
+					<aside class="notes">
+						Now we can import that in our fancy word cloud.<br>
+						And add the ajax custom element into our html
+					</aside>
+				</section>
+
+				<section>
+					<img src="img/custom-element-detail-06.png" class="plain stretch">
+					<aside class="notes">
+
+					</aside>
+				</section>
 
 
 
