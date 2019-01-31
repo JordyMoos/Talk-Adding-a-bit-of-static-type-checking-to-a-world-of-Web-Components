@@ -15,6 +15,7 @@ initialModel = 0
 type Msg
     = Increment
     | Decrement
+    | Reset
 
 
 update : Msg -> Model -> Model
@@ -26,6 +27,9 @@ update msg model =
         Decrement ->
             model - 1
 
+        Reset ->
+                0
+
 
 view : Model -> Html Msg
 view model =
@@ -33,6 +37,7 @@ view model =
         [ button [ onClick Increment ] [ text "+1" ]
         , div [] [ text <| String.fromInt model ]
         , button [ onClick Decrement ] [ text "-1" ]
+        , button [ onClick Reset ] [ text "reset" ]
         ]
 
 
